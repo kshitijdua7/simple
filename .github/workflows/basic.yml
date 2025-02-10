@@ -4,22 +4,24 @@ on: push
 
 jobs:
   jobs1:
-      name: first job
-      runs-on: ubuntu-latest
-      steps:
-        - name: Step one
-          uses: actions/checkout@v4
-        - name: Step two
-          run: ls -la
-          run: pwd
- jobs2:
-      name: second job to run 
-      runs-on: windows-latest
-      steps: 
-        - name: step one job2
-          uses: actions/checkout@v4
-        - name: step two of job2
-          run: pwd
-          
+    name: first job
+    runs-on: ubuntu-latest
+    steps:
+      - name: Step one
+        uses: actions/checkout@v4
+      - name: Step two
+        run: |
+          ls -la
+          pwd
+
+  jobs2:
+    name: second job to run
+    runs-on: windows-latest
+    steps:
+      - name: step one job2
+        uses: actions/checkout@v4
+      - name: step two of job2
+        run: pwd
+
   
 
